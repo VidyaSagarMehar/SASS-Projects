@@ -1,0 +1,41 @@
+// html{
+//     height: 100vh;
+//     background-image: url('./cover.jpg');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+// }
+
+// we can achive above functionality by importing file of mixin 
+@import "mixins"; // importing mixin
+@import "btn"; // importing parcel
+
+html{
+    height: 100vh;
+    @include coverimage("./cover.jpg"); //use the mixin
+}
+body{
+    h1{
+        color: #3DBE29;
+        text-align: center;
+        margin-top: 5%;
+        font-size: 3rem;
+    }
+
+    p{
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+.container{
+    text-align: center;
+}
+.btn-youtube{
+    @extend %btn;
+    background-color:#E21717;
+}
+
+.btn-courses{
+    @extend %btn
+}
