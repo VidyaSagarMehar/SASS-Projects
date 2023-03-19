@@ -32,10 +32,10 @@ body{
     text-align: center;
 }
 .btn-youtube{
-    @extend %btn;
-    background-color:#E21717;
+    @extend %btn; // inheriting from parcel
+    background-color:#E21717; //overriding the default color
 }
 
 .btn-courses{
-    @extend %btn
+    @extend %btn; // inheriting from parcel
 }
